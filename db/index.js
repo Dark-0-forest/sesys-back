@@ -1,9 +1,9 @@
 const mysql = require("mysql");
 
 const db = mysql.createPool({
-    host:"localhost",
-    user:"root",
-    password:"252597248",
+    host:"www.darkforest.work",
+    user:"sesys_rw",
+    password:"sesys_rw",
     database:"sesys",
     port:3306
 })

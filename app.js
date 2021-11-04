@@ -17,7 +17,7 @@ app.use(express.json());
 
 // 设置路由
 app.use("/sup", supplierRouter);
-app.use("/evaluater", evaluateRouter);
+app.use("/evaluate", evaluateRouter);
 
 
 app.listen(80);

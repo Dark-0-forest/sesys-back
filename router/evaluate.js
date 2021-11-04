@@ -1,11 +1,13 @@
 const express = require("express");
-const evaluateHandler = require("../router_handler/evaluater");
+
+const evaluateHandler = require("../router_handler/evaluate");
+const evaluateValidation = require("../validation/evaluate");
 const router = express.Router();
 
-router.get("/list", evaluateHandler.list);
+router.get("/list", evaluateValidation.list, evaluateHandler.list);
 
-router.post("/add", evaluateHandler.add);
+router.post("/add", evaluateValidation.add, evaluateHandler.add);
 
-router.post("/del", evaluateHandler.del);
+router.post("/del", evaluateValidation.del, evaluateHandler.del);
 
 module.exports = router;
